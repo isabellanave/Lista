@@ -1,0 +1,11 @@
+List<int> Lista1 = new List<int> { 5, 6, 7, 8 };
+List<int> Lista2 = new List<int> { 1, 2, 3, 4};
+
+var Lista3 = Lista1.Concat(Lista2);
+
+var crescente = Lista3.OrderBy(x => x).ToList();
+
+var decrescente = Lista3.OrderByDescending(x => x).ToList();
+
+Console.WriteLine("Crescente: " + string.Join(", ", crescente));
+Console.WriteLine("Decrescente: " + string.Join(", ", decrescente))

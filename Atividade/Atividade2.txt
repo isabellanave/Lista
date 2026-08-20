@@ -1,0 +1,17 @@
+List<double> Turma1  = new List<double> { 9.5, 8.0 };
+List<double> Turma2 = new List<double> { 7.0, 5.5 };
+double Media1 = Turma1.Average();
+double Media2 = Turma2.Average();
+
+if (Media1 > Media2)
+{
+    Console.WriteLine($"A turma 1 teve a maior média. A média foi de {Media1}");
+}
+else if (Media2 > Media1)
+{
+    Console.WriteLine($"A turma 2 teve a maior média. A média foi de {Media2}");
+}
+else
+{
+    Console.WriteLine($"Ambas as média foram iguais");
+}
