@@ -1,0 +1,29 @@
+List<string> Palavras = new List<string>();
+
+string entrada = "";
+
+while (true)
+{
+    Console.Write("Digite uma palavra (ou ZERO para sair): ");
+    entrada = Console.ReadLine().Trim();
+
+    if (entrada.ToLower() == "zero")
+    {
+        break;
+    }
+    Palavras.Add(entrada);
+}
+
+Console.WriteLine("Digite a palavra que desaeja contar: ");
+string contarPalavra = Console.ReadLine();
+
+int contador = 0;
+foreach (string p in Palavras)
+{
+    if (p == contarPalavra)
+    {
+        contador++;
+    }
+}
+
+Console.WriteLine($"Temos {contador} ocorrências de: {contarPalavra}");
