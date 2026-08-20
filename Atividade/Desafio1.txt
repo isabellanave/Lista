@@ -1,0 +1,63 @@
+
+List<int> TodosNumeros = new List<int>();
+List<int> Pares = new List<int>();
+List<int> Impares = new List<int>();
+
+int numero = -1;
+
+Console.WriteLine("Digite os números. (Digite 0 para encerrar)");
+
+while (numero != 0)
+{
+    Console.WriteLine("Digite um número");
+    numero = int.Parse(Console.ReadLine());
+    if (numero > 0)
+    {
+        TodosNumeros.Add(numero);
+    }
+}
+
+foreach (int num in TodosNumeros)
+{
+    if (num % 2 == 0)
+    {
+        Pares.Add(num);
+    }
+    else
+    {
+        Impares.Add(num);
+    }
+}
+
+Pares.Sort();
+Impares.Sort();
+
+int somaPares = 0;
+foreach (int p in Pares)
+{
+    somaPares += p;
+}
+
+int somaImpares = 0;
+foreach (int p in Impares)
+{
+    somaImpares += p;
+}
+
+Console.WriteLine("Números pares: ");
+foreach (int p in Pares)
+{
+    Console.WriteLine(p + " ");
+}
+
+Console.WriteLine("Soma dos pares: " + somaPares);
+
+Console.WriteLine("Números Impares: ");
+foreach (int i in Impares)
+{
+    Console.WriteLine(i + " ");
+}
+
+Console.WriteLine("Soma impares: " + somaImpares);
+
+Console.WriteLine("Soma total dos números: " + (somaPares + somaImpares));
