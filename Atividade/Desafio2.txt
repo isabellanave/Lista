@@ -17,7 +17,7 @@ foreach (int n in Numeros)
 int mutNumeros = 1;
 
 foreach (int n in Numeros) b
-{
+{2
     mutNumeros *= n;
 }
 
